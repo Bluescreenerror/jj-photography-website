@@ -1,6 +1,6 @@
 (function(){
 /* ============ EDIT ME ============ */
-var EMAIL="jeeshaan.j@gmail.com", IGH="jj__photoworks", IG="https://instagram.com/"+IGH;
+var EMAIL="jeeshaan.j@gmail.com", IGH="jj.photography.ca", IG="https://instagram.com/"+IGH;
 var SITE="https://www.jj-photography.ca"; /* your live domain, no trailing slash */
 var LOGO="images/logo-header.png"; /* jj mark, replaces the text logo in the header */
 var CAT={ /* gallery categories: name, accent colour, handwritten note */
