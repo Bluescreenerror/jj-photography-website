@@ -18,7 +18,7 @@ h1,h2,h3{font-weight:900;line-height:.9;letter-spacing:-.035em}
 /* display + UI type stays in Archivo; running text uses --text */
 h1,h2,h3,.brand,.drawer nav a,.ticker,.tape,.cap,.strip,.lcap b,.svc dt,label,#fs,.svc-grid a,.faq summary,.fbig,.roles span{font-family:var(--sans)}
 h2{font-size:clamp(2.2rem,6vw,4.5rem)}
-.hand{font-family:var(--hand);font-weight:400;font-size:1.5rem;line-height:1.1;color:var(--amber-gold)}
+.hand{font-family:var(--hand);font-weight:400;font-size:1.5rem;line-height:1.1;color:var(--amber-gold); margin:1em;}
 .tilt{display:inline-block;transform:rotate(-4deg)}
 mark{background:var(--amber-gold);color:var(--black);padding:0 .25em}
 
@@ -67,7 +67,7 @@ body.menu-open main,body.menu-open .foot{transform:translateX(-5vw) scale(.97);f
 .roles span{border:2px solid var(--off);border-radius:999px;padding:.15rem .9rem;font-weight:700;font-size:.95rem}
 .roles span:nth-child(2){border-color:var(--azure-blue)}.roles span:nth-child(3){border-color:var(--neon-green);color:var(--neon-green)}
 .lede{max-width:34ch;margin:1.2rem 0 1.6rem;color:var(--mute)}
-.cta{display:flex;flex-wrap:wrap;gap:.8rem}
+.cta{display:flex;flex-wrap:wrap;gap:.8rem; margin-top:2rem;}
 .hero-img{position:relative;justify-self:center;width:min(100%,520px)}
 .hero-img:before{content:"";position:absolute;inset:6% -5% -5% 6%;background:var(--neon-pink);z-index:0;transform:rotate(2deg)}
 .hero-img img{position:relative;z-index:1;width:100%;aspect-ratio:2/3;object-fit:cover}
