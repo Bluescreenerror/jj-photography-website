@@ -80,9 +80,9 @@ var IGI='<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focu
 var IGL='<a class="ig" href="'+IG+'" rel="noopener" aria-label="'+IGH+' on Instagram">'+IGI+'@'+IGH+'</a>';
 var NAV=[["Home","index.html","home","hello"],["Gallery","gallery.html","gallery","the wall"],["About","about.html","about","who's this"],["Services","about.html#services","","what I shoot"],["Book","book.html","book","let's go"],["Contact","mailto:"+EMAIL,"","say hi"]];
 var links=NAV.map(function(n){return'<a href="'+n[1]+'"'+(n[2]===page?' aria-current="page"':'')+'>'+n[0]+'<small>'+n[3]+'</small></a>'}).join('');
-main.insertAdjacentHTML('beforebegin','<header class="nav"><a class="brand" href="index.html" aria-label="jj_photography home">'+(LOGO?'<img src="'+LOGO+'" alt="">':'')+'<span>jj_photography</span></a><button class="mbtn" type="button" aria-expanded="false" aria-controls="drawer"><span>Menu</span><i></i></button></header><div class="scrim"></div><aside class="drawer" id="drawer" aria-label="Site menu"><nav aria-label="Main">'+links+'</nav><div class="dfoot"><p class="hand">brampton / toronto / gta</p><a href="mailto:'+EMAIL+'">'+EMAIL+'</a>'+IGL+'</div></aside>');
+main.insertAdjacentHTML('beforebegin','<header class="nav"><a class="brand" href="index.html" aria-label="jj-photography home">'+(LOGO?'<img src="'+LOGO+'" alt="">':'')+'<span>jj-photography</span></a><button class="mbtn" type="button" aria-expanded="false" aria-controls="drawer"><span>Menu</span><i></i></button></header><div class="scrim"></div><aside class="drawer" id="drawer" aria-label="Site menu"><nav aria-label="Main">'+links+'</nav><div class="dfoot"><p class="hand">brampton / toronto / gta</p><a href="mailto:'+EMAIL+'">'+EMAIL+'</a>'+IGL+'</div></aside>');
 var FL=Object.keys(CAT).map(function(k){return'<a style="--c:'+CAT[k].v+'" href="gallery.html?c='+k+'">'+CAT[k].n+'</a>'}).join('');
-main.insertAdjacentHTML('afterend','<footer class="foot"><div class="fgrid"><div><h2>say hi</h2><a class="fbig" href="mailto:'+EMAIL+'">'+EMAIL+'</a>'+IGL+'</div><nav aria-label="Footer"><h2>work</h2>'+FL+'</nav><div><h2>studio</h2><span>Brampton, Ontario</span><span>Toronto / GTA</span><a href="book.html">Book a shoot</a></div><a class="totop" href="#main">back up &uarr;</a></div><p class="fmark" aria-hidden="true">jj_photography</p><div class="fbar"><small>&copy; '+new Date().getFullYear()+' jj_photography</small><small>Photographer in Brampton &amp; Toronto</small></div></footer>');
+main.insertAdjacentHTML('afterend','<footer class="foot"><div class="fgrid"><div><h2>say hi</h2><a class="fbig" href="mailto:'+EMAIL+'">'+EMAIL+'</a>'+IGL+'</div><nav aria-label="Footer"><h2>work</h2>'+FL+'</nav><div><h2>studio</h2><span>Brampton, Ontario</span><span>Toronto / GTA</span><a href="book.html">Book a shoot</a></div><a class="totop" href="#main">back up &uarr;</a></div><p class="fmark" aria-hidden="true">jj-photography</p><div class="fbar"><small>&copy; '+new Date().getFullYear()+' jj-photography</small><small>Photographer in Brampton &amp; Toronto</small></div></footer>');
 if(page!=='book')document.body.insertAdjacentHTML('beforeend','<div class="mbar"><a class="btn solid" href="book.html">Book a shoot</a><a class="mig" href="'+IG+'" rel="noopener" aria-label="'+IGH+' on Instagram">'+IGI+'</a></div>');
 var bar=$('.mbar'),nav=$('.nav'),mb=$('.mbtn'),dr=$('#drawer'),sc=$('.scrim'),lbl=$('span',mb),isOpen=false;
 function setMenu(o){isOpen=o;document.body.classList.toggle('menu-open',o);document.body.classList.toggle('locked',o);mb.setAttribute('aria-expanded',o);lbl.textContent=o?'Close':'Menu';
@@ -145,13 +145,13 @@ if(wall){
  cats.innerHTML=['all'].concat(Object.keys(CAT)).map(function(c){var n=c==='all'?P.length:P.filter(function(p){return p.c===c}).length;
   return'<button type="button" class="cat" data-c="'+c+'" style="--c:'+(c==='all'?'var(--amber-gold)':CAT[c].v)+'" aria-pressed="false">'+(c==='all'?'All':CAT[c].n)+'<sup>'+n+'</sup></button>'}).join('');
 
- var D={all:["Photo Gallery","Portrait, event, automotive, wildlife and creative photography by jj_photography in Brampton, Toronto and the GTA."],
+ var D={all:["Photo Gallery","Portrait, event, automotive, wildlife and creative photography by jj-photography in Brampton, Toronto and the GTA."],
  portraits:["Portrait Photography","Family, couple, baby and pet portrait photography in Brampton, Toronto and the GTA."],
  events:["Event Photography","Candid wedding and event photography in Brampton, Toronto and the GTA."],
  automotive:["Automotive Photography","Car photography in Brampton and Toronto: details, wheels and the character of classic and custom cars."],
  creative:["Creative Photography","Styled, long exposure and experimental photography shoots in Toronto and the GTA."],
  wildlife:["Wildlife Photography","Bird, insect and flower photography from Ontario parks and backyards."]};
- function seo(c){var d=D[c],u=SITE+'/gallery.html'+(c==='all'?'':'?c='+c),T=d[0]+' | jj_photography Brampton & Toronto';document.title=T;
+ function seo(c){var d=D[c],u=SITE+'/gallery.html'+(c==='all'?'':'?c='+c),T=d[0]+' | jj-photography Brampton & Toronto';document.title=T;
   [['meta[name=description]',d[1]],['meta[property="og:description"]',d[1]],['meta[name="twitter:description"]',d[1]],['meta[property="og:title"]',T],['meta[name="twitter:title"]',T],['meta[property="og:url"]',u]].forEach(function(a){var m=$(a[0]);if(m)m.setAttribute('content',a[1])});
   var l=$('link[rel=canonical]');if(l)l.href=u}
  function row(p,i,n){var k=CAT[p.c];
@@ -180,8 +180,8 @@ if(wall){
  lb.addEventListener('touchend',function(e){var d=e.changedTouches[0].clientX-sx;if(Math.abs(d)>50)show(pos+(d<0?1:-1))},{passive:true});
  render(new URLSearchParams(location.search).get('c')||'all');
  /* image credit for Google Images: creator must be a full object, not just an @id reference */
- var OWN={'@type':'Organization','@id':SITE+'/#business','name':'jj_photography','url':SITE};
- var ld=document.createElement('script');ld.type='application/ld+json';ld.textContent=JSON.stringify({'@context':'https://schema.org','@type':'ImageGallery','name':'jj_photography photo gallery','url':SITE+'/gallery.html','author':OWN,'image':P.map(function(p){return{'@type':'ImageObject','contentUrl':SITE+'/'+src(p,p.z[p.z.length-1]),'name':p.t+' | '+CAT[p.c].n+' photography','description':p.d||p.a,'caption':p.a,'creator':OWN,'copyrightHolder':OWN,'creditText':'jj_photography','copyrightNotice':'\u00a9 '+new Date().getFullYear()+' jj_photography. All rights reserved.','license':SITE+'/book.html','acquireLicensePage':SITE+'/book.html','contentLocation':'Greater Toronto Area, Ontario, Canada'}})});document.head.appendChild(ld);
+ var OWN={'@type':'Organization','@id':SITE+'/#business','name':'jj-photography','url':SITE};
+ var ld=document.createElement('script');ld.type='application/ld+json';ld.textContent=JSON.stringify({'@context':'https://schema.org','@type':'ImageGallery','name':'jj-photography photo gallery','url':SITE+'/gallery.html','author':OWN,'image':P.map(function(p){return{'@type':'ImageObject','contentUrl':SITE+'/'+src(p,p.z[p.z.length-1]),'name':p.t+' | '+CAT[p.c].n+' photography','description':p.d||p.a,'caption':p.a,'creator':OWN,'copyrightHolder':OWN,'creditText':'jj-photography','copyrightNotice':'\u00a9 '+new Date().getFullYear()+' jj-photography. All rights reserved.','license':SITE+'/book.html','acquireLicensePage':SITE+'/book.html','contentLocation':'Greater Toronto Area, Ontario, Canada'}})});document.head.appendChild(ld);
  var h=location.hash.slice(1),t=h&&P.filter(function(p){return p.s===h})[0];
  if(t){if(active!=='all'&&t.c!==active)render(t.c);open(VIS.indexOf(t))}
 }
@@ -198,7 +198,7 @@ if(f){
   var key=f.dataset.accessKey;
   if(!key||key.indexOf('YOUR_')===0){say('This form is not connected yet. Add your Web3Forms access key to book.html (see the TODO comment).','err');return}
   var d=new FormData(f),o={};d.forEach(function(v,k){o[k]=v});
-  o.access_key=key;o.subject='New jj_photography inquiry: '+o.type;o.from_name='jj_photography website';
+  o.access_key=key;o.subject='New jj-photography inquiry: '+o.type;o.from_name='jj-photography website';
   busy=true;btn.disabled=true;btn.textContent='Sending...';say('Sending your inquiry...');
   fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(o)})
   .then(function(r){return r.json()}).then(function(j){
