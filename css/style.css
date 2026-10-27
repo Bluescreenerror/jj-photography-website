@@ -378,10 +378,12 @@ dialog .lb{min-width:44px;min-height:44px}
 
 /* testimonials */
 .kind{padding:0 0 clamp(4rem,9vw,8rem)}
-.kind>.wrap{display:flex;flex-wrap:wrap;align-items:baseline;gap:.5rem 1.5rem;margin-bottom:2.5rem}
-.quotes{display:flex;gap:clamp(1.5rem,3vw,2.5rem);overflow-x:auto;scroll-snap-type:x mandatory;padding-block:1rem 2rem;scroll-padding-inline:var(--pad)}
-.q{flex:1 0 min(85%,22rem);scroll-snap-align:start;display:flex;flex-direction:column;justify-content:space-between;background:var(--off);color:var(--black);padding:clamp(1.4rem,2.6vw,2.2rem);box-shadow:.8rem .8rem 0 var(--c);transform:rotate(-.8deg)}
+.kind>.wrap:first-child{display:flex;flex-wrap:wrap;align-items:baseline;gap:.5rem 1.5rem;margin-bottom:2.5rem}
+.quotes{display:flex;flex-wrap:nowrap;gap:clamp(1.5rem,3vw,2.5rem);overflow-x:auto;scroll-snap-type:x mandatory;padding-block:1rem 2rem;scroll-padding-inline:var(--pad)}
+.q{flex:1 0 min(80%,22rem);scroll-snap-align:start;display:flex;flex-direction:column;justify-content:space-between;background:var(--off);color:var(--black);padding:clamp(1.4rem,2.6vw,2.2rem);box-shadow:.8rem .8rem 0 var(--c);transform:rotate(-.8deg)}
 .q:nth-child(even){transform:rotate(.6deg)}
 .q p{font:900 clamp(1.15rem,1.7vw,1.55rem)/1.15 var(--sans);letter-spacing:-.025em}
 .q figcaption{display:flex;align-items:baseline;gap:.9rem;margin-top:1.6rem;font:900 1.1rem var(--sans)}
 .q figcaption .hand{margin:0;color:var(--black);transform:rotate(-3deg)}
+
+.sel .intro{flex-basis:100%;max-width:52ch;color:var(--mute)}
