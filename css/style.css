@@ -377,13 +377,17 @@ dialog .lb{min-width:44px;min-height:44px}
 }
 
 /* testimonials */
-.kind{padding:0 0 clamp(4rem,9vw,8rem)}
-.kind>.wrap:first-child{display:flex;flex-wrap:wrap;align-items:baseline;gap:.5rem 1.5rem;margin-bottom:2.5rem}
-.quotes{display:flex;flex-wrap:nowrap;gap:clamp(1.5rem,3vw,2.5rem);overflow-x:auto;scroll-snap-type:x mandatory;padding-block:1rem 2rem;scroll-padding-inline:var(--pad)}
-.q{flex:1 0 min(80%,22rem);scroll-snap-align:start;display:flex;flex-direction:column;justify-content:space-between;background:var(--off);color:var(--black);padding:clamp(1.4rem,2.6vw,2.2rem);box-shadow:.8rem .8rem 0 var(--c);transform:rotate(-.8deg)}
+.kind{padding:0 0 clamp(3rem,7vw,6rem)}
+.kind>.wrap:first-child{display:flex;flex-wrap:wrap;align-items:baseline;gap:.3rem 1.5rem;margin-bottom:1.5rem}
+.kind .hand,.sel>.wrap:first-child .hand{margin:0}
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(1.2rem,2.6vw,2.2rem);padding-bottom:1rem}
+.q{display:flex;flex-direction:column;justify-content:space-between;gap:1.4rem;background:var(--off);color:var(--black);padding:clamp(1.2rem,2.4vw,2rem);box-shadow:.7rem .7rem 0 var(--c);transform:rotate(-.8deg)}
 .q:nth-child(even){transform:rotate(.6deg)}
-.q p{font:900 clamp(1.15rem,1.7vw,1.55rem)/1.15 var(--sans);letter-spacing:-.025em}
-.q figcaption{display:flex;align-items:baseline;gap:.9rem;margin-top:1.6rem;font:900 1.1rem var(--sans)}
+.q p{font:900 clamp(1.1rem,1.6vw,1.5rem)/1.15 var(--sans);letter-spacing:-.025em}
+.q figcaption{display:flex;align-items:baseline;gap:.9rem;font:900 1.05rem var(--sans)}
 .q figcaption .hand{margin:0;color:var(--black);transform:rotate(-3deg)}
-
-.sel .intro{flex-basis:100%;max-width:52ch;color:var(--mute)}
+@media (max-width:900px){.quotes{grid-template-columns:repeat(2,1fr);gap:1.1rem}.q{padding:1rem;gap:1rem;box-shadow:.45rem .45rem 0 var(--c)}.q p{font-size:.92rem;line-height:1.2;letter-spacing:-.015em}.q figcaption{font-size:.95rem}}
+@media (max-width:480px){.quotes{grid-template-columns:1fr 1fr}}
+/* home intro + tighter gap into testimonials */
+.sel{padding-bottom:clamp(1rem,3vw,2rem)}
+.sel .intro{flex-basis:100%;max-width:34ch;margin:.4rem 0 0;font:800 clamp(1.15rem,2vw,1.7rem)/1.15 var(--sans);letter-spacing:-.02em;color:var(--off)}
