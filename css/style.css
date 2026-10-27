@@ -388,6 +388,5 @@ dialog .lb{min-width:44px;min-height:44px}
 .q figcaption .hand{margin:0;color:var(--black);transform:rotate(-3deg)}
 @media (max-width:900px){.quotes{grid-template-columns:repeat(2,1fr);gap:1.1rem}.q{padding:1rem;gap:1rem;box-shadow:.45rem .45rem 0 var(--c)}.q p{font-size:.92rem;line-height:1.2;letter-spacing:-.015em}.q figcaption{font-size:.95rem}}
 @media (max-width:480px){.quotes{grid-template-columns:1fr 1fr}}
-/* home intro + tighter gap into testimonials */
+/* tighter gap into testimonials */
 .sel{padding-bottom:clamp(1rem,3vw,2rem)}
-.intro{max-width:calc(34ch + 2 * var(--pad));margin:0;padding-top:.5rem;font:800 clamp(1.15rem,2vw,1.7rem)/1.15 var(--sans);letter-spacing:-.02em;color:var(--off)}
