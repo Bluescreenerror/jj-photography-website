@@ -390,4 +390,4 @@ dialog .lb{min-width:44px;min-height:44px}
 @media (max-width:480px){.quotes{grid-template-columns:1fr 1fr}}
 /* home intro + tighter gap into testimonials */
 .sel{padding-bottom:clamp(1rem,3vw,2rem)}
-.sel .intro{flex-basis:100%;max-width:34ch;margin:.4rem 0 0;font:800 clamp(1.15rem,2vw,1.7rem)/1.15 var(--sans);letter-spacing:-.02em;color:var(--off)}
+.intro{max-width:calc(34ch + 2 * var(--pad));margin:0;padding-top:.5rem;font:800 clamp(1.15rem,2vw,1.7rem)/1.15 var(--sans);letter-spacing:-.02em;color:var(--off)}
